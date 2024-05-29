@@ -1,0 +1,82 @@
+# Project: 项目
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o UseManage.o Text_Prompt.o Video_Prompt.o Text_Prompt_Manage.o Prompt.o Video_Prompt_Manage.o Model_Manage.o Model.o Feedback.o Feedback_Manage.o Share.o Model_Manage_Operation.o Feedback_Operation.o Text_Prompt_Manage_Operation.o Video_Prompt_Manage_Operation.o Use_Manage_Operation.o UserInterface.o User.o
+LINKOBJ  = main.o UseManage.o Text_Prompt.o Video_Prompt.o Text_Prompt_Manage.o Prompt.o Video_Prompt_Manage.o Model_Manage.o Model.o Feedback.o Feedback_Manage.o Share.o Model_Manage_Operation.o Feedback_Operation.o Text_Prompt_Manage_Operation.o Video_Prompt_Manage_Operation.o Use_Manage_Operation.o UserInterface.o User.o
+LIBS     = -L"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 项目.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+UseManage.o: UseManage.cpp
+	$(CPP) -c UseManage.cpp -o UseManage.o $(CXXFLAGS)
+
+Text_Prompt.o: Text_Prompt.cpp
+	$(CPP) -c Text_Prompt.cpp -o Text_Prompt.o $(CXXFLAGS)
+
+Video_Prompt.o: Video_Prompt.cpp
+	$(CPP) -c Video_Prompt.cpp -o Video_Prompt.o $(CXXFLAGS)
+
+Text_Prompt_Manage.o: Text_Prompt_Manage.cpp
+	$(CPP) -c Text_Prompt_Manage.cpp -o Text_Prompt_Manage.o $(CXXFLAGS)
+
+Prompt.o: Prompt.cpp
+	$(CPP) -c Prompt.cpp -o Prompt.o $(CXXFLAGS)
+
+Video_Prompt_Manage.o: Video_Prompt_Manage.cpp
+	$(CPP) -c Video_Prompt_Manage.cpp -o Video_Prompt_Manage.o $(CXXFLAGS)
+
+Model_Manage.o: Model_Manage.cpp
+	$(CPP) -c Model_Manage.cpp -o Model_Manage.o $(CXXFLAGS)
+
+Model.o: Model.cpp
+	$(CPP) -c Model.cpp -o Model.o $(CXXFLAGS)
+
+Feedback.o: Feedback.cpp
+	$(CPP) -c Feedback.cpp -o Feedback.o $(CXXFLAGS)
+
+Feedback_Manage.o: Feedback_Manage.cpp
+	$(CPP) -c Feedback_Manage.cpp -o Feedback_Manage.o $(CXXFLAGS)
+
+Share.o: Share.cpp
+	$(CPP) -c Share.cpp -o Share.o $(CXXFLAGS)
+
+Model_Manage_Operation.o: Model_Manage_Operation.cpp
+	$(CPP) -c Model_Manage_Operation.cpp -o Model_Manage_Operation.o $(CXXFLAGS)
+
+Feedback_Operation.o: Feedback_Operation.cpp
+	$(CPP) -c Feedback_Operation.cpp -o Feedback_Operation.o $(CXXFLAGS)
+
+Text_Prompt_Manage_Operation.o: Text_Prompt_Manage_Operation.cpp
+	$(CPP) -c Text_Prompt_Manage_Operation.cpp -o Text_Prompt_Manage_Operation.o $(CXXFLAGS)
+
+Video_Prompt_Manage_Operation.o: Video_Prompt_Manage_Operation.cpp
+	$(CPP) -c Video_Prompt_Manage_Operation.cpp -o Video_Prompt_Manage_Operation.o $(CXXFLAGS)
+
+Use_Manage_Operation.o: Use_Manage_Operation.cpp
+	$(CPP) -c Use_Manage_Operation.cpp -o Use_Manage_Operation.o $(CXXFLAGS)
+
+UserInterface.o: UserInterface.cpp
+	$(CPP) -c UserInterface.cpp -o UserInterface.o $(CXXFLAGS)
+
+User.o: User.cpp
+	$(CPP) -c User.cpp -o User.o $(CXXFLAGS)
